@@ -394,6 +394,12 @@ class SocketIO(EngineIO):
         except KeyError:
             raise PacketError('undefined socket.io namespace (%s)' % path)
 
+    def put_namespace(self, namespace):
+        if namespace.path:
+            self._namespace_by_path[namespace.path] = namespace
+            self.connect(namespace.path)
+            self.wait(for_namespace=namespace)
+
     # Act
 
     def connect(self, path='', with_transport_instance=False):

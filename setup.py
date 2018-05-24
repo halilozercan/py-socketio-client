@@ -10,8 +10,8 @@ DESCRIPTION = '\n\n'.join(LOAD_TEXT(_) for _ in [
     'CHANGES.rst',
 ])
 setup(
-    name='socketIO-client',
-    version='0.7.2',
+    name='py-socketio-client',
+    version='0.0.1',
     description='A socket.io client library',
     long_description=DESCRIPTION,
     license='MIT',
@@ -22,13 +22,14 @@ setup(
         'Development Status :: 5 - Production/Stable',
     ],
     keywords='socket.io node.js',
-    author='Roy Hyunjin Han',
-    author_email='rhh@crosscompute.com',
-    url='https://github.com/invisibleroads/socketIO-client',
+    author='Roy Hyunjin Han, Halil Ozercan',
+    author_email='halilozercan@gmail.com',
+    url='https://github.com/halilozercan/py-socketio-client',
     install_requires=[
         'requests>=2.7.0',
         'six',
         'websocket-client',
+        'invisibleroads-macros'
     ],
     tests_require=[
         'nose',
